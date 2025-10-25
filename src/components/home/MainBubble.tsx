@@ -1,8 +1,9 @@
-import FeatureImage from '../../assets/home/feature.png';
+import FeatureImage from '../../assets/home/metadata-image.png';
 
 export default function MainBubble() {
     return(
-        <div className ='w-[99%] bg-white/90 h-auto pb-10 flex rounded-3xl'>
+        <div className ='w-[99%] bg-white/90 h-auto pb-2 flex rounded-3xl items-center'>
+            {/* Heading section */}
             <div className ='w-1/2 h-full pl-20 pt-10'>
                 <p className = 'text-6xl font-bold leading-20'>
                     What's hiding <br /> 
@@ -14,9 +15,10 @@ export default function MainBubble() {
                     Upload a photo and instantly uncover its hidden details
                 </p>
 
+                {/* Button Group */}
                 <div className ='flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10'>
                     <button
-                        className='w-auto sm:mb-0 mb-5 py-3 px-6 sm:py-5 sm:px-10 flex items-center text-white/90 text-base sm:text-lg bg-zinc-900 rounded-full transition-colors duration-400 ease-in-out shadow-md focus:shadow-2xl hover:bg-zinc-800 hover:shadow-2xl active:scale-95 hover:text-pink-300'>
+                        className='w-auto sm:mb-0 mb-1 py-3 px-6 sm:py-5 sm:px-10 flex items-center text-white/90 text-base sm:text-lg bg-zinc-900 rounded-full transition-colors duration-400 ease-in-out shadow-md focus:shadow-2xl hover:bg-zinc-800 hover:shadow-2xl active:scale-95 hover:text-pink-300'>
                         <p className='whitespace-nowrap'>Get started</p>
                     </button>
 
@@ -29,9 +31,11 @@ export default function MainBubble() {
 
             </div>
 
-            <div className ='w-1/2 h-full pr-20 pt-10'>
+            {/* Feature Image For Desktop Only */}
+            <div className ='w-1/2 h-full pr-2 pt-2 md:display:block  display:hidden'>
                 <img src={FeatureImage} alt="Feature" className ='w-full h-auto rounded-3xl shadow-md' />
             </div>
+
         </div>
     )
 }
