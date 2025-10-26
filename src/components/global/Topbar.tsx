@@ -14,11 +14,11 @@ export default function Topbar() {
         <nav
           className="justify-self-center flex space-x-6">
 
-          <a
-            href="#"
+          <Link
+            to='/'
             className="text-md font-medium hover:underline hover:text-white/90 transition-colors focus:outline-none focus:ring-2 focus:ring-white/30 rounded">
             Home
-          </a>
+          </Link>
 
           <a
             href="#"

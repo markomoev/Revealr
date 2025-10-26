@@ -1,8 +1,8 @@
 export default function SignupForm() {
 return (
-    <div className="w-full h-full">
+    <div className="w-full max-w-md md:max-w-none">
         {/* Card */}
-        <div className="bg-pink-300 rounded-r-3xl p-6 shadow-lg">
+        <div className="bg-pink-300 rounded-3xl p-6 md:rounded-r-3xl md:rounded-l-none w-full">
             {/* Header */}
             <div className="mb-4">
                 <p className="text-3xl font-semibold text-slate-900 leading-tight">Create an account</p>
@@ -15,7 +15,7 @@ return (
             </div>
 
             {/* Form */}
-            <form className="space-y-4 pb-10 pt-10">
+            <form className="space-y-4 pb-10 pt-6">
                 <div>
                     <label className="block text-base font-medium text-slate-700 mb-1" htmlFor="username">Username</label>
                     <input
@@ -23,7 +23,7 @@ return (
                         name="username"
                         type="text"
                         placeholder="your username"
-                        className="w-full px-4 py-3 rounded-lg bg-white/80 shadow-sm placeholder-slate-400 text-base text-slate-800 focus:outline-none focus:ring-1 focus:ring-pink-800 focus:ring-opacity-90 transition"
+                        className="w-full px-4 py-3 rounded-lg bg-pink-50/30 placeholder-slate-400 text-base text-slate-800 focus:outline-none focus:ring-1 focus:ring-pink-800 focus:ring-opacity-90 transition"
                     />
                 </div>
 
@@ -34,7 +34,7 @@ return (
                         name="email"
                         type="email"
                         placeholder="you@example.com"
-                        className="w-full px-4 py-3 rounded-lg bg-white/80 shadow-sm placeholder-slate-400 text-base text-slate-800 focus:outline-none focus:ring-1 focus:ring-pink-800 focus:ring-opacity-90 transition"
+                        className="w-full px-4 py-3 rounded-lg bg-pink-50/30 placeholder-slate-400 text-base text-slate-800 focus:outline-none focus:ring-1 focus:ring-pink-800 focus:ring-opacity-90 transition"
                     />
                 </div>
 
@@ -45,13 +45,13 @@ return (
                         name="password"
                         type="password"
                         placeholder="Choose a strong password"
-                        className="w-full px-4 py-3 rounded-lg bg-white/80 shadow-sm placeholder-slate-400 text-base text-slate-800 focus:outline-none focus:ring-1 focus:ring-pink-800 focus:ring-opacity-90 transition"
+                        className="w-full px-4 py-3 rounded-lg bg-pink-50/30 placeholder-slate-400 text-base text-slate-800 focus:outline-none focus:ring-1 focus:ring-pink-800 focus:ring-opacity-90 transition"
                     />
                 </div>
 
                 <button
                     type="submit"
-                    className="w-full py-3 rounded-lg bg-white text-lg hover:bg-pink-100 transition"
+                    className="w-full py-3 rounded-lg bg-white text-black text-lg hover:bg-pink-900 transition"
                 >
                     Create account
                 </button>

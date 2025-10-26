@@ -1,27 +1,29 @@
 import Topbar from "../components/global/Topbar"
-
 import SignupForm from "../components/signup/SingupForm"
 
 export default function SignupPage(){
+
     return(
-        <div className = 'w-full h-auto'>
+        <div className='w-full h-auto bg-transparent'>
             <div className="">
                 <Topbar />
             </div>
 
-
-        <div className = 'w-full h-auto flex items-center justify-center mb-10'>
-            <div className ='w-auto h-auto flex flex-row mt-10 rounded-3xl bg-white'>
-                {/* Left-side image */}
-                <div className="w-1/2 h-auto">
-                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2lnbnVwfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60" alt="Signup illustration" className="w-full h-full object-cover rounded-l-3xl"/>
+            <div className='w-full h-auto flex flex-col md:flex-row items-start md:items-stretch mt-10'>
+                {/* Left-side image*/}
+                <div className="hidden md:block md:flex-1 relative overflow-hidden min-h-[280px]">
+                    <img
+                        src="https://images.unsplash.com/photo-1520975915514-5f6a0a8b7f4b?auto=format&fit=crop&w=1400&q=80"
+                        alt="Signup illustration"
+                        className="w-full h-full object-cover md:rounded-l-3xl"
+                    />
                 </div>
+
                 {/* Signup form */}
-                <div className="w-1/2 h-auto flex items-center justify-center">
+                <div className="w-full md:w-1/2 flex items-start justify-center px-6 py-8">
                     <SignupForm />
                 </div>
             </div>
-        </div>
         </div>
     )
 }
