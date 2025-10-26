@@ -32,7 +32,7 @@ export default function MainBubble() {
             </div>
 
             {/* Feature Image For Desktop Only */}
-            <div className ='w-1/2 h-full pr-2 pt-2 md:display:block  display:hidden'>
+            <div className ='w-1/2 h-full pr-2 pt-2 md:block hidden'>
                 <img src={FeatureImage} alt="Feature" className ='w-full h-auto rounded-3xl shadow-md' />
             </div>
 

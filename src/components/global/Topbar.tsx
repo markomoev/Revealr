@@ -40,7 +40,7 @@ export default function Topbar() {
           </a>
           <a
             href="#"
-            className="text-md font-md bg-pink-300/80 px-3 py-1 rounded-md hover:bg-pink-300/90">
+            className="text-md text-black font-md bg-linear-to-br from-pink-200 to-pink-300 px-3 py-1 rounded-md hover:bg-pink-300/90">
             Sign Up
           </a>
         </div>
