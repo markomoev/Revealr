@@ -1,3 +1,5 @@
+import {Link} from "react-router"
+
 export default function Topbar() {
   return (
     <div className="w-full">
@@ -33,16 +35,17 @@ export default function Topbar() {
 
         {/* User Actions */}
         <div className="justify-self-end flex items-center space-x-4">
-          <a
-            href="#"
+          <Link
+            to="/login"
             className="text-md font-md hover:underline hover:text-white/90">
             Login
-          </a>
-          <a
-            href="#"
+          </Link>
+
+          <Link
+            to="/signup"
             className="text-md text-black font-md bg-linear-to-br from-pink-200 to-pink-300 px-3 py-1 rounded-md hover:bg-pink-300/90">
             Sign Up
-          </a>
+          </Link>
         </div>
 
       </div>
