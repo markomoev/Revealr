@@ -7,6 +7,8 @@
   ],
   "scripts": {
     "bootstrap": "npm install --workspaces",
+    "start:server:dev": "npm --workspace ./server run dev",
+    "git-setup": "git branch -M main && git push -u origin main && git config push.default simple",
     "start": "npm --workspaces run start",
     "start:server": "npm --workspace ./server run start",
     "start:client": "npm --workspace ./client run start"
@@ -20,3 +22,4 @@
     "nodemon": "^3.1.10"
   }
 }
+
