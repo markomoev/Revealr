@@ -1,6 +1,8 @@
 import {Link} from 'react-router-dom'
 
 import HomeIcon from './icons/home.png'
+import ScheduleIcon from './icons/schedule.png'
+import ProgressIcon from './icons/progress.png'
 
 export default function Sidebar(){
 return (
@@ -16,17 +18,17 @@ return (
         <div className ='h-screen flex flex-col'>
             <div className ='w-full p-4 pt-10 flex flex-col gap-6'>
                 <Link to="/" className ='text-white text-lg p-4 rounded-full bg-amber-700 flex flex-row items-center gap-3'>
-                    <img src={HomeIcon} alt="" className='w-6 h-6' />
+                    <img src={HomeIcon} alt="Home" className='w-6 h-6' />
                     Home
                 </Link>
 
                 <Link to="/" className ='text-white text-lg p-4 rounded-full bg-amber-700 flex flex-row items-center gap-3'>
-                    <img src={HomeIcon} alt="" className='w-6 h-6' />
+                    <img src={ScheduleIcon} alt="Schedule" className='w-6 h-6' />
                     Schedule
                 </Link>
                 
                 <Link to="/" className ='text-white text-lg p-4 rounded-full bg-amber-700 flex flex-row items-center gap-3'>
-                    <img src={HomeIcon} alt="" className='w-6 h-6' />
+                    <img src={ProgressIcon} alt="Progress" className='w-6 h-6' />
                     Progress
                 </Link>
             </div>
