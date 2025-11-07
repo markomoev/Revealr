@@ -1,12 +1,12 @@
 import { useState } from 'react'
 
-import SidebarLink from './SidebarLink'
+import SidebarLink from './components/SidebarLink'
+import SidebarLogout from './components/SidebarLogout'
 
 export default function Sidebar(){
     // retractable sidebar
     const [isOpen, setIsOpen] = useState(false)
-    // active page
-    const [isActive, setIsActive] = useState(false)
+
 
 return (
     <div
@@ -25,12 +25,12 @@ return (
             <hr className="border-zinc-800 w-3/4 mt-2" />
         </div>
 
-        <div className="flex-1 flex flex-col justify-start">
+        <div className="flex-1 flex flex-col justify-between">
             <div className="w-full px-6 pt-8 flex flex-col gap-6">
-                <SidebarLink
-                    isOpen = {isOpen}
-                    isActive = {() => setIsActive(!isActive)}
-                />
+                <SidebarLink isOpen={isOpen} />
+            </div>
+            <div className="w-full px-6 pb-8">
+                <SidebarLogout isOpen={isOpen}/>
             </div>
         </div>
     </div>

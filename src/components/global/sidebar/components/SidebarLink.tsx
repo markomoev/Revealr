@@ -1,18 +1,17 @@
 import {NavLink} from 'react-router-dom'
 
-import HomeIcon from './icons/home.png'
-import ScheduleIcon from './icons/schedule.png'
-import ProgressIcon from './icons/progress.png'
-import ProjectsIcon from './icons/projects.png'
+import HomeIcon from '../icons/home.png'
+import ScheduleIcon from '../icons/schedule.png'
+import ProgressIcon from '../icons/progress.png'
+import ProjectsIcon from '../icons/projects.png'
 
 // retractable sidebar prop
 type SidebarState = {
     isOpen: boolean;
-    isActive: () => void;
 }
 
 
-export default function SidebarLink({isOpen, isActive}: SidebarState){
+export default function SidebarLink({isOpen}: SidebarState){
     // array for all links info
     const links = [
         {to: '/', label: "Home", icon: HomeIcon},

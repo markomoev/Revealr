@@ -1,4 +1,4 @@
-import Sidebar from "../components/global/Sidebar"
+import Sidebar from "../components/global/sidebar/Sidebar"
 
 export default function HomePage(){
     return(
