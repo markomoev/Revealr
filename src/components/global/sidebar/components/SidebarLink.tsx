@@ -20,7 +20,7 @@ export default function SidebarLink({isOpen}: SidebarState){
         {to: '/progress', label: "Progress", icon: ProgressIcon},
     ]
 
-    const linksDisplay = links.map((l, i) => {
+    const linksDisplay = links.map((l) => {
         return(
             <NavLink
                 key={l.label}
