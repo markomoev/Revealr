@@ -12,9 +12,10 @@ return (
     <div
         onMouseEnter={() => setIsOpen(true)}
         onMouseLeave={() => setIsOpen(false)}
-        className={`h-screen flex flex-col shadow-xl ${isOpen ? 'md:w-1/7 w-1/4' : 'w-fit'}`}
+        className="h-screen flex flex-col shadow-xl transition-all duration-500 bg-[oklch(16.5%_0_0)]"
         style={{
-            backgroundColor: "oklch(16.5% 0 0)",
+            width: isOpen ? "14.28%" : "4vw",
+            minWidth: isOpen ? "12rem" : "6.5rem"
         }}
     >
         <div className="w-full flex flex-col items-center pt-8 pb-4">
