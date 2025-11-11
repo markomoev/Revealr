@@ -1,5 +1,6 @@
 import HomePage from './pages/Home'
 import SignupPage from './pages/auth/Signup'
+import SigninPage from './pages/auth/Signin'
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
@@ -10,6 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/signup" element={<SignupPage />} />
+          <Route path="/signin" element={<SigninPage />} />
         </Routes>
       </div>
     </Router>

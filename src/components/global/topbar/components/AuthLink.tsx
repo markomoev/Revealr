@@ -10,10 +10,10 @@ return(
             Sign up
         </NavLink>
         <NavLink
-            to=""
+            to={'/signin'}
             className="px-5 py-2 bg-amber-700 text-white rounded-full text-base font-medium transition-colors duration-200 hover:bg-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-500"
         >
-            Log in
+            Sign in
         </NavLink>
     </div>
 )

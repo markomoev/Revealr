@@ -38,7 +38,7 @@ export default function SignupForm() {
             </form>
 
             <button className = 'pt-2 pb-2 bg-amber-700 text-xl rounded-2xl cursor-pointer w-1/2'>
-                Signup
+                Sign up
             </button>
         </div>
     );
