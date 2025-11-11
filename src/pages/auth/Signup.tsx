@@ -5,12 +5,13 @@ import Topbar from "../../components/global/topbar/Topbar"
 
 export default function SignupPage(){
 return(
-    <div className = 'w-full flex flex-row'>
-        <Sidebar/>
-        
-        <div className="flex items-center justify-center">
+    <div className = 'flex flex-row'>
+            <Sidebar/>
+        <div className="flex flex-col items-center h-screen w-14/15">
             <Topbar/>
-            <SignupContainer/>
+            <div className = 'flex items-center justify-center md:mt-40'>
+                <SignupContainer/>
+            </div>
         </div>
     </div>
 )
