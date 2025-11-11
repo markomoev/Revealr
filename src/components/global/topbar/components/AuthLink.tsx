@@ -4,7 +4,7 @@ export default function AuthLink(){
 return(
     <div className="flex flex-row gap-4">
         <NavLink
-            to=""
+            to={'/signup'}
             className="px-5 py-2 bg-zinc-800 text-zinc-300 rounded-full text-base font-medium transition-colors duration-200 hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-zinc-500"
         >
             Sign up
