@@ -21,7 +21,7 @@ return (
         <div className="w-full flex flex-col items-center pt-8 pb-4">
             <p className={`${isOpen ? 'visible' : 'hidden'} text-white text-4xl font-bold tracking-wide mb-2 flex items-center gap-3`}>
                 {/* Logo placeholder removed. Add your logo here when ready. */}
-                TaskManager
+                Hustly
             </p>
             <hr className="border-zinc-800 w-3/4 mt-2" />
         </div>
