@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import {signUpUser} from '../../../hooks/auth'
+import {signUpUser} from '../../../hooks/signup'
 
 export default function SignupForm() {
     // state management of the signup credentials
