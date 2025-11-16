@@ -3,8 +3,6 @@ import { useState } from 'react'
 import SidebarLink from './components/SidebarLink'
 import SidebarLogout from './components/SidebarLogout'
 
-import Logo from '../../../public/logo.svg'
-
 export default function Sidebar(){
     // retractable sidebar
     const [isOpen, setIsOpen] = useState(false)
@@ -20,11 +18,11 @@ return (
             minWidth: isOpen ? "12rem" : "6.5rem"
         }}
     >
-        <div className="w-full flex flex-col items-start justify-center pt-8 pb-4">
-            <div className="flex items-center mb-2 gap-0" style={{paddingLeft: 0}}>
-                <img src={Logo} alt="Logo" className="w-20 h-20" style={{marginLeft: 0}} />
-                <p className={`${isOpen ? 'visible' : 'hidden'} text-white text-4xl font-bold tracking-wide mb-2 text-center`} style={{marginLeft: 0}}>
-                    Hustly
+        <div className="w-full flex flex-col items-center justify-center pt-8 pb-4">
+            <div className="flex w-full items-center justify-center" style={{paddingLeft: 0}}>
+                <p className= ' text-white text-4xl font-bold mb-2 text-center' style={{marginLeft: 0}}>
+                    <span className = 'text-amber-700'>H</span>
+                    <span className = {`${isOpen ? 'visible' : 'hidden'}`}>ustly</span>
                 </p>
             </div>
             <hr className="border-zinc-800 w-3/4 mt-2" />
