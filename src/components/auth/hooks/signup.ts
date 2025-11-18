@@ -1,4 +1,4 @@
-import {supabase} from '../client'
+import {supabase} from '../../../client'
 
 // TODO: should add is_deleted and is_updated
 export const signUpUser = async (email: string, password: string, username: string, ) => {

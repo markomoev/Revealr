@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import {signInUser} from '../../../hooks/signin'
+import {signInUser} from '../hooks/signin'
 
 export default function SigninForm() {
   // variables for the form inputs
