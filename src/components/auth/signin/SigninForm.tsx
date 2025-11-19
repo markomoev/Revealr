@@ -1,14 +1,19 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import {signInUser} from '../hooks/signin'
 
 export default function SigninForm() {
+  // for navigating after successful signin
+  const navigate = useNavigate()
+
   // variables for the form inputs
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
   const handleSignIn = async () => {
     await signInUser(email, password)
+    navigate('/')
   }
 
 

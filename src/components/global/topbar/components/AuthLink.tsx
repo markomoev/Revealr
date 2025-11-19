@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useEffectEvent, useState } from "react"
 import { NavLink } from "react-router-dom"
 
 import {supabase} from '../../../../client'
@@ -9,12 +9,9 @@ const [nickname, setNickname] = useState('')
 const [isLoggedIn, setIsLoggedIn] = useState(false)
 
 // taking the username
-const handleLogin = async () => {
-    console.log('vleze 1')
+const handleLogin = useEffectEvent( async () => {
     const { data: { user } } = await supabase.auth.getUser()
     const user_id : any = user?.id;
-    console.log('user:', user);
-    console.log('user_id:', user?.id);
 
     try{
         if(user_id){
@@ -27,7 +24,6 @@ const handleLogin = async () => {
                 console.error("Error in fetching username: " + fetchingUsernameError.message);
                 return;
             }
-            console.log('vleze')
             setNickname(fetchedUsername[0]?.username)
             setIsLoggedIn(true)
             return nickname;
@@ -36,25 +32,11 @@ const handleLogin = async () => {
     catch(error){
         console.error('An unexpected error occurred! ' + error )
     }
-}
+});
 
 useEffect(() => {
     handleLogin();
-
-    const { data: authListener } = supabase.auth.onAuthStateChange((event) => {
-        if (event === 'SIGNED_IN') {
-            handleLogin();
-        }
-        if (event === 'SIGNED_OUT') {
-            setNickname('');
-            setIsLoggedIn(false);
-        }
-    });
-
-    return () => {
-        authListener?.subscription.unsubscribe();
-    };
-}, []);
+}, [handleLogin]);
 
 return(
  <div className="flex flex-row gap-4 w-full justify-end items-center">

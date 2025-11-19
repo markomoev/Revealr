@@ -1,12 +1,16 @@
 import LogoutIcon from '../icons/logout.png'
 
 import {supabase} from '../../../../client'
+import { useNavigate } from 'react-router-dom'
 
 type SidebarState = {
     isOpen: boolean;
 }
 
 export default function SidebarLogout({isOpen} : SidebarState){
+// for nacigating to login after the sign out
+const navigate = useNavigate();
+
 
 const signOut = async () => {
     const { error } = await supabase.auth.signOut()
@@ -16,7 +20,7 @@ const signOut = async () => {
         return;
     }
 
-    console.log('izleze')
+    navigate('./signin')
 }
 
 return(
