@@ -26,10 +26,10 @@ const signOut = async () => {
 return(
     <div>
         <button
-            onClick = {signOut}
-            className="cursor-pointer whitespace-nowrap w-full px-5 py-3 bg-zinc-800 text-zinc-300 rounded-full text-lg font-medium transition-colors duration-200 hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-zinc-500 flex items-center gap-3"
+            onClick={signOut}
+            className="cursor-pointer whitespace-nowrap w-full px-3.5 py-2.5 bg-zinc-900/70 text-zinc-300 rounded-full text-lg font-medium transition-colors duration-300 hover:border-red-500 border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-red-500 flex items-center gap-3 group"
         >
-            <img src={LogoutIcon} alt="Logout" className="w-5 h-5" />
+            <img src={LogoutIcon} alt="Logout" className="w-5 h-5 transition-transform duration-300 group-hover:rotate-[-20deg] group-hover:scale-125" />
             <span className={isOpen ? 'visible' : 'hidden'}>Sign out</span>
         </button>
     </div>
