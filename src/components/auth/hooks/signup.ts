@@ -1,7 +1,11 @@
 import {supabase} from '../../../client'
 
 // TODO: should add is_deleted and is_updated
-export const signUpUser = async (email: string, password: string, username: string, ) => {
+export const signUpUser = async (email: string,
+                                 username: string,
+                                 password: string,
+                                 firstName:string,
+                                 lastName:string, ) => {
     // supabase signup function
     try{
         const { data, error:createUserError } = await supabase.auth.signUp({
@@ -23,7 +27,8 @@ export const signUpUser = async (email: string, password: string, username: stri
             .upsert({
                 id: user_id,
                 username: username,
-                password: password,
+                firstName: firstName,
+                lastName: lastName,
             })
             .eq('id', user_id)
             

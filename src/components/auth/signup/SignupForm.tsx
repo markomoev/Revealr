@@ -4,14 +4,14 @@ import {signUpUser} from '../hooks/signup'
 
 export default function SignupForm() {
     // state management of the signup credentials
-    const [firstName, setFirstName] = useState('')
-    const [lastName, setLastName] = useState ('')
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [firstName, setFirstName] = useState('')
+    const [lastName, setLastName] = useState('')
     
     const handleSignUp = async () =>  {
-        await signUpUser(email, password, username)
+        await signUpUser(email, password, username, firstName, lastName)
     }
 
     return (
