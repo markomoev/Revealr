@@ -18,34 +18,34 @@ export default function SigninForm() {
 
 
 return(
-  <div className = 'flex flex-col gap-6 items-center justify-center bg-zinc-900 rounded-xl p-8 shadow-lg'>
+  <div className="flex flex-col gap-6 items-center justify-center bg-zinc-900/20 rounded-xl p-8 shadow-sm shadow-amber-700">
     <form 
-      className="flex flex-col gap-6"
+      className="flex flex-col gap-6 w-full"
       action=""
     >
       {/* Inputs */}
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 w-full">
         <input
-          value = {email}
-          onChange = {(e) => setEmail(e.target.value)}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           type="email"
           placeholder="Email"
-          className="w-full px-4 py-2 bg-zinc-800 text-white border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-700 placeholder:text-zinc-400 transition"
+          className="w-full px-4 py-2 bg-zinc-900 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-700 placeholder:text-zinc-400 transition"
         />
         <input
-          value = {password}
-          onChange = {(e) => setPassword(e.target.value)}
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
           type="password"
           placeholder="Password"
-          className="w-full px-4 py-2 bg-zinc-800 text-white border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-700 placeholder:text-zinc-400 transition"
+          className="w-full px-4 py-2 bg-zinc-900 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-700 placeholder:text-zinc-400 transition"
         />
       </div>
     </form>
 
       <button
-        onClick = {handleSignIn}
+        onClick={handleSignIn}
         type="submit"
-        className="pt-2 pb-2 bg-amber-700 text-xl rounded-2xl cursor-pointer w-1/2"
+        className="pt-2 pb-2 bg-zinc-900/20 hover:bg-zinc-800 text-white text-xl rounded-3xl cursor-pointer w-1/2 border-2 border-amber-700 transition-colors duration-300"
       >
         Sign in
       </button>
