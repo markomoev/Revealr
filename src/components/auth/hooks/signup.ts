@@ -1,6 +1,5 @@
 import {supabase} from '../../../client'
 
-// TODO: should add is_deleted and is_updated
 export const signUpUser = async (email: string,
                                  username: string,
                                  password: string,
@@ -18,7 +17,6 @@ export const signUpUser = async (email: string,
             return;
         }
         // if there is no error update the table for the users too
-            // TODO: I should add encryption to the password (sec reasons)
         if(data){
             const user_id : any = data?.user?.id
 

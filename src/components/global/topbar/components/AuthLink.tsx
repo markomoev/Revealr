@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom"
 
 import {supabase} from '../../../../client'
 
+import ProfileDisplay from "./ProfileDisplay"
+
 export default function AuthLink(){
 // username variables
 const [nickname, setNickname] = useState('')
@@ -40,8 +42,11 @@ useEffect(() => {
 
 return(
  <div className="flex flex-row gap-4 w-full justify-end items-center">
-    {isLoggedIn && nickname ? 
-        <span className="px-5 py-2 bg-zinc-900 text-zinc-300 rounded-full text-base font-medium transition-colors duration-200 shadow ml-auto border border-amber-700">{nickname}</span>
+    {isLoggedIn && nickname ?
+        <div className = 'w-full'> 
+            <ProfileDisplay
+                nickname = {nickname}/>
+        </div>
         : 
         <>
             <NavLink
