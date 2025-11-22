@@ -22,7 +22,7 @@ export default function SigninForm() {
 
 
 return(
-  <div className="flex flex-col gap-6 items-center justify-center bg-zinc-900/20 rounded-xl p-8 shadow-sm shadow-amber-700">
+  <div className="flex flex-col gap-6 items-center justify-center bg-zinc-900/50 rounded-xl p-8 ">
     <form 
       className="flex flex-col gap-6 w-full"
       onSubmit={handleSignIn}

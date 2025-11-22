@@ -27,7 +27,7 @@ export default function SidebarLink({isOpen}: SidebarState){
                 to={l.to}
                 className={({ isActive }) =>
                     `group ${isOpen ? 'px-5 py-3' : 'w-fit px-3.5 py-2.5'}
-                    whitespace-nowrap flex flex-row items-center gap-4 text-white text-lg rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-500 backdrop-blur-md
+                    whitespace-nowrap flex flex-row items-center gap-4 text-white text-md rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-500 backdrop-blur-md
                     ${isActive ? 'border-2 border-amber-700 shadow-lg bg-zinc-900' : 'border-2 border-transparent hover:bg-zinc-800/30'}`
                 }
             >
