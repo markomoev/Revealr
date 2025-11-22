@@ -1,6 +1,7 @@
 import HomePage from './pages/Home'
 import SignupPage from './pages/auth/Signup'
 import SigninPage from './pages/auth/Signin'
+import ProfilePage from './pages/profile-menu/Profile'
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
@@ -12,6 +13,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/signin" element={<SigninPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
         </Routes>
       </div>
     </Router>

@@ -13,11 +13,11 @@ const [isOpen, setIsOpen] = useState(false)
 
 return(
     <div 
-        className="mt-2 flex flex-col relative pb-2"
-        onMouseEnter={() => setIsOpen(true)}
-        onMouseLeave={() => setIsOpen(false)}
+        className="w-auto mt-2 flex flex-col relative"
     >
-        <div
+        <div // on hover open the menu   
+            onMouseEnter={() => setIsOpen(true)}
+            onMouseLeave={() => setIsOpen(false)}
             className="flex flex-row gap-3 justify-center px-5 py-2 bg-zinc-900 text-zinc-300 rounded-full text-base font-medium transition-colors duration-200 shadow ml-auto border border-amber-700"
         >
             <div
@@ -31,8 +31,13 @@ return(
             </div>
             <span className="">{nickname}</span>
         </div>
+        {/* menu open */}
         {isOpen && (
-            <div className="absolute right-0 top-full z-10">
+            <div 
+                onMouseEnter={() => setIsOpen(true)}
+                onMouseLeave={() => setIsOpen(false)}
+                className="absolute right-0 top-full pt-2 z-10"
+            >
                 <ProfileMenu
                     setIsOpen={setIsOpen}/>
             </div>

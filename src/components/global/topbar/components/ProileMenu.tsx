@@ -14,7 +14,7 @@ return(
         className = 'md:w-50 h-auto px-5 py-2 bg-zinc-900/50 rounded-xl'>
         <NavLink
         className = 'flex flex-row px-1 py-1 gap-2'
-        to =''
+        to ={'/profile'}
         
         >
             <img src={UserIcon} alt="User Icon" className = 'mt-1 w-5 h-4' />
