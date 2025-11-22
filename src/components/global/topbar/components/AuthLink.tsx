@@ -41,7 +41,7 @@ useEffect(() => {
 }, [handleLogin]);
 
 return(
- <div className="flex flex-row gap-4 w-full justify-end items-center">
+ <div className="flex flex-row gap-4  justify-end items-center">
     {isLoggedIn && nickname ?
         <div className = 'w-full'> 
             <ProfileDisplay
