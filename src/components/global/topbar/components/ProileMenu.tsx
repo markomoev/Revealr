@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom"
 import UserIcon from './icons/user.png'
+import SettingsIcon from './icons/settings.png'
 
 type openStateProp = {
     setIsOpen: (value: boolean) => void;
@@ -19,6 +20,15 @@ return(
         >
             <img src={UserIcon} alt="User Icon" className = 'mt-1 w-5 h-4' />
             <span className = 'text-white w-full'>Profile</span>
+        </NavLink>
+
+        <NavLink
+        className = 'flex flex-row px-1 py-1 gap-2'
+        to =""
+        
+        >
+            <img src={SettingsIcon} alt="User Icon" className = 'mt-1 w-5 h-4' />
+            <span className = 'text-white w-full'>Settings</span>
         </NavLink>
     </div>
 )

@@ -19,6 +19,7 @@ return(
             <div className="flex flex-col gap-2">
                 <label className="text-white text-sm font-medium">Username</label>
                 <input 
+                    readOnly
                     type="text" 
                     placeholder="Enter username"
                     className="px-4 py-2 bg-zinc-800 text-white rounded-lg border border-zinc-700 focus:outline-none focus:border-amber-700 transition"
@@ -28,6 +29,7 @@ return(
             <div className="flex flex-col gap-2">
                 <label className="text-white text-sm font-medium">Email</label>
                 <input 
+                    readOnly
                     type="email" 
                     placeholder="Enter email"
                     className="px-4 py-2 bg-zinc-800 text-white rounded-lg border border-zinc-700 focus:outline-none focus:border-amber-700 transition"
@@ -41,7 +43,8 @@ return(
         <form className="flex flex-col gap-4">
             <div className="flex flex-col gap-2">
                 <label className="text-white text-sm font-medium">Bio</label>
-                <textarea 
+                <textarea
+                    readOnly 
                     placeholder="Tell us about yourself"
                     rows={4}
                     className="px-4 py-2 bg-zinc-800 text-white rounded-lg border border-zinc-700 focus:outline-none focus:border-amber-700 transition resize-none"

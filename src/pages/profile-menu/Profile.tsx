@@ -5,7 +5,7 @@ import ProfilePopup from "../../components/profile/ProfilePopup"
 
 export default function ProfilePage(){
 return(
-    <div className = 'w-full h-auto flex flex-row'> 
+    <div className = 'w-full h-screen flex flex-row overflow-hidden'> 
         <Sidebar/>
 
         <div className = 'flex-1 h-auto flex flex-col'>
