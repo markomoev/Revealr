@@ -9,11 +9,12 @@ export const signInUser = async (email: string, password: string) => {
 
         if(signinUserError){
             console.error('Error in signing in! ' + signinUserError.message )
-            return;
+            return null;
         }
         return data;
     }
     catch(error){
-        console.error('An unexpected error occured!')
+        console.error('An unexpected error occured!', error)
+        return null;
     }
 }

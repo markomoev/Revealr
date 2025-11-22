@@ -10,15 +10,16 @@ export default function SignupForm() {
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
     
-    const handleSignUp = async () =>  {
-        await signUpUser(email, password, username, firstName, lastName)
+    const handleSignUp = async (e: React.FormEvent) =>  {
+        e.preventDefault()
+        await signUpUser(email, username, password, firstName, lastName)
     }
 
     return (
         <div className="flex flex-col gap-6 items-center justify-center bg-zinc-900/20 rounded-xl p-8 shadow-sm shadow-amber-700">
             <form 
                 className="flex flex-col gap-6 w-full"
-                action=""
+                onSubmit={handleSignUp}
             >
                 {/* Inputs */}
                 <div className="flex gap-4 w-full">
@@ -62,14 +63,14 @@ export default function SignupForm() {
                         className="w-full px-4 py-2 bg-zinc-900 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-700 placeholder:text-zinc-400 transition"
                     />
                 </div>
-            </form>
 
-            <button
-                onClick={handleSignUp}
-                className="pt-2 pb-2 bg-zinc-900/20 hover:bg-zinc-800 text-white text-xl rounded-3xl cursor-pointer w-1/2 border-2 border-amber-700 transition-colors duration-300"
-            >
-                Sign up
-            </button>
+                <button
+                    type="submit"
+                    className="pt-2 pb-2 bg-zinc-900/20 hover:bg-zinc-800 text-white text-xl rounded-3xl cursor-pointer w-1/2 border-2 border-amber-700 transition-colors duration-300"
+                >
+                    Sign up
+                </button>
+            </form>
         </div>
     );
 }

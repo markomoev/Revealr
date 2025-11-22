@@ -12,9 +12,12 @@ export default function SigninForm() {
   const [password, setPassword] = useState('')
 
 
-  const handleSignIn = async () => {
-    await signInUser(email, password)
-    navigate('/')
+  const handleSignIn = async (e: React.FormEvent) => {
+    e.preventDefault()
+    const result = await signInUser(email, password)
+    if (result) {
+      navigate('/')
+    }
   }
 
 
@@ -22,7 +25,7 @@ return(
   <div className="flex flex-col gap-6 items-center justify-center bg-zinc-900/20 rounded-xl p-8 shadow-sm shadow-amber-700">
     <form 
       className="flex flex-col gap-6 w-full"
-      action=""
+      onSubmit={handleSignIn}
     >
       {/* Inputs */}
       <div className="flex flex-col gap-6 w-full">
@@ -41,17 +44,14 @@ return(
           className="w-full px-4 py-2 bg-zinc-900 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-700 placeholder:text-zinc-400 transition"
         />
       </div>
-    </form>
 
       <button
-        onClick={handleSignIn}
         type="submit"
         className="pt-2 pb-2 bg-zinc-900/20 hover:bg-zinc-800 text-white text-xl rounded-3xl cursor-pointer w-1/2 border-2 border-amber-700 transition-colors duration-300"
       >
         Sign in
       </button>
-
-
+    </form>
   </div>
 );
 }
